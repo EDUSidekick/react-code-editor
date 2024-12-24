@@ -39,7 +39,7 @@ function App() {
   };
 
   return (
-    <div className=" w-full h-96 gap-4">
+    <div className="w-full h-screen gap-4">
       <CodeEditor
         files={files}
         activeFile={activeFile}
