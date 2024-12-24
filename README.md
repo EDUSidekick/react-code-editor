@@ -11,6 +11,11 @@ A lightweight, customizable code editor component for React applications, built 
 - 🔄 Live output preview
 - 📱 Responsive design with automatic layout adjustment
 
+
+### Screenshot
+![Code Editor Screenshot](./docs/screenshot.png)
+
+
 ## Installation
 
 ```bash
