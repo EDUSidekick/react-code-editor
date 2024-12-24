@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@edusidekick/react-code-editor": ["packages/react-code-editor/src"],
+      "@edusidekick/react-code-editor/*": ["packages/react-code-editor/src/*"]
+    }
+  },
+  "extends": "./tsconfig.app.json"
+}

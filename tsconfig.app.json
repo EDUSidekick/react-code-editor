@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": [
+    "src",
+    "packages/react-code-editor/src/components/FileTab.tsx",
+    "packages/react-code-editor/src/components/ToolbarButton.tsx",
+    "packages/react-code-editor/src/components/NewFileDialog.tsx",
+    "packages/react-code-editor/src/components/FileTabList.tsx",
+    "packages/react-code-editor/src/hooks/useFiles.ts",
+    "packages/react-code-editor/src/hooks/useLayout.ts",
+    "packages/react-code-editor/src/utils/fileUtils.ts",
+    "packages/react-code-editor/src/utils/languageUtils.ts",
+    "packages/react-code-editor/src/types.ts",
+    "packages/react-code-editor/src/constants.ts",
+    "packages/react-code-editor/src/EditorPane.tsx",
+    "packages/react-code-editor/src/EditorToolbar.tsx",
+    "packages/react-code-editor/src/NewFileDialog.tsx",
+    "packages/react-code-editor/src/OutputPane.tsx",
+    "packages/react-code-editor/src/ToolbarButton.tsx",
+    "packages/react-code-editor/src/components/CodeEditor2.tsx"
+  ]
+}

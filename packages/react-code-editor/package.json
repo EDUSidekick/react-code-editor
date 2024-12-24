@@ -1,0 +1,43 @@
+{
+  "name": "@edusidekick/react-code-editor",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "style": "./dist/assets/styles.css",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "style": "./dist/assets/styles.css"
+    },
+    "./CodeEditor": {
+      "types": "./dist/CodeEditor.d.ts",
+      "import": "./dist/CodeEditor.js"
+    },
+    "./EditorPane": {
+      "types": "./dist/EditorPane.d.ts",
+      "import": "./dist/EditorPane.js"
+    },
+    "./types": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/types/index.js"
+    },
+    "./style.css": "./dist/assets/styles.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "@monaco-editor/react": "^4.6.0",
+    "allotment": "^1.19.3"
+  },
+  "scripts": {
+    "build": "vite build && tsc --emitDeclarationOnly",
+    "prepare": "npm run build"
+  }
+}
