@@ -117,6 +117,19 @@ npm run build
 npm test
 ```
 
+## Contributing
+
+We love your input! We want to make contributing to @edusidekick/react-code-editor as easy and transparent as possible. Please see our [Contributing Guide](CONTRIBUTING.md) for details on:
+
+- Development process
+- Pull request process
+- Bug reports
+- Feature requests
+- Code style
+- Local development setup
+
+Before submitting a PR, please first create an issue describing the change you'd like to make.
+
 ## License
 
 MIT © [EduSidekick](LICENSE) 
