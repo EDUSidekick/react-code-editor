@@ -36,6 +36,9 @@
     "@monaco-editor/react": "^4.6.0",
     "allotment": "^1.19.3"
   },
+  "devDependencies": {
+    "@types/node": "^20.0.0"
+  },
   "scripts": {
     "build": "vite build && tsc --emitDeclarationOnly",
     "prepare": "npm run build"

@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "types": ["node"],
     "paths": {
       "@edusidekick/react-code-editor": ["packages/react-code-editor/src"],
       "@edusidekick/react-code-editor/*": ["packages/react-code-editor/src/*"]
