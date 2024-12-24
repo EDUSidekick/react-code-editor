@@ -24,6 +24,9 @@ First off, thanks for taking the time to contribute! 🎉
    - `feat: add new feature`
    - `fix: resolve bug`
    - `docs: update documentation`
+   - `style: improve code style`
+   - `test: add tests`
+   - `conf: configuration`
    - `chore: update dependencies`
    - `refactor: improve code structure`
 
