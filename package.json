@@ -14,12 +14,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@edusidekick/react-code-editor": "workspace:*",
     "@monaco-editor/react": "^4.6.0",
-    "allotment": "^1.20.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-icons": "^5.0.1",
-    "@edusidekick/react-code-editor": "workspace:*"
+    "react-icons": "^5.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",
