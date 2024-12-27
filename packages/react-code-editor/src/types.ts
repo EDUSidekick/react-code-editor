@@ -3,4 +3,5 @@ export interface File {
   name: string;
   language: string;
   content: string;
+  deletable?: boolean;
 }
