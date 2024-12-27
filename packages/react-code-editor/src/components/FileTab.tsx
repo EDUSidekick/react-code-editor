@@ -7,16 +7,9 @@ interface FileTabProps {
   isActive: boolean;
   onClick: () => void;
   onDelete: () => void;
-  showDelete?: boolean; // Added showDelete prop with optional type
 }
 
-export function FileTab({
-  file,
-  isActive,
-  onClick,
-  onDelete,
-  showDelete = false,
-}: FileTabProps) {
+export function FileTab({ file, isActive, onClick, onDelete }: FileTabProps) {
   // Default showDelete to false
   const handleDelete = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -35,7 +28,7 @@ export function FileTab({
     >
       <FiFile size={16} />
       <span>{file.name}</span>
-      {showDelete && ( // Conditionally render delete button based on showDelete
+      {file.deletable && ( // Conditionally render delete button based on deletable
         <button
           onClick={handleDelete}
           className="ml-2 p-1 rounded-full opacity-0 group-hover:opacity-100 hover:bg-gray-200 dark:hover:bg-gray-700 transition-opacity"

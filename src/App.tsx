@@ -1,30 +1,37 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { CodeEditor } from "@edusidekick/react-code-editor";
 import { File } from "@edusidekick/react-code-editor/types";
-
-const DEFAULT_FILES: File[] = [
-  {
-    name: "main.js",
-    content: 'console.log("Hello World!");',
-    language: "javascript",
-  },
-  // ... other default files
-];
+import { DEFAULT_FILES } from "./constants";
 
 function App() {
   const [files, setFiles] = useState<File[]>(DEFAULT_FILES);
   const [activeFile, setActiveFile] = useState<File>(files[0]);
   const [output, setOutput] = useState("");
 
+  const activeFileContentRef = useRef(activeFile.content);
+
   const handleFileContentChange = (content: string) => {
+    activeFileContentRef.current = content;
     setFiles(
       files.map((f) => (f.name === activeFile.name ? { ...f, content } : f))
     );
   };
 
-  const handleCreateFile = (name: string, content: string) => {
-    const newFile = { name, content, language: "javascript" };
+  const handleFileSelect = (file: File) => {
+    activeFileContentRef.current = file.content;
+    setActiveFile(file);
+  };
+
+  const handleCreateFile = (name: string) => {
+    // TODO: create the initial content based on the file type
+    const newFile = {
+      name,
+      content: "// sample js file",
+      language: "javascript",
+      deletable: true,
+    };
     setFiles([...files, newFile]);
+    setActiveFile(newFile);
   };
 
   const handleDeleteFile = (file: File) => {
@@ -35,15 +42,22 @@ function App() {
   };
 
   const handleRun = () => {
-    setOutput(`Running ${activeFile.name}...\n${activeFile.content}`);
+    const updatedActiveFile = {
+      ...activeFile,
+      content: activeFileContentRef.current,
+    };
+    setActiveFile(updatedActiveFile);
+    setOutput(
+      `Running ${updatedActiveFile.name}...\n${updatedActiveFile.content}`
+    );
   };
 
   return (
-    <div className=" w-full h-96 gap-4">
+    <div className="w-full h-screen gap-4">
       <CodeEditor
         files={files}
         activeFile={activeFile}
-        onFileSelect={setActiveFile}
+        onFileSelect={handleFileSelect}
         onFileContentChange={handleFileContentChange}
         onCreateFile={handleCreateFile}
         onDeleteFile={handleDeleteFile}
