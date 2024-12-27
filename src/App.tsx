@@ -28,6 +28,7 @@ function App() {
       name,
       content: "// sample js file",
       language: "javascript",
+      deletable: true,
     };
     setFiles([...files, newFile]);
     setActiveFile(newFile);
